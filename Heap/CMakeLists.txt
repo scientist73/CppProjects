@@ -16,7 +16,7 @@ project(heap VERSION 1.0 LANGUAGES CXX)
 
 # Fetching google test lib for testing
 if(${heap_build_tests})
-    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third-party/googletest)
+    #add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third-party/googletest)
 
     #include(FetchContent)
     #FetchContent_Declare(
