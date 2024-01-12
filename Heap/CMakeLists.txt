@@ -14,19 +14,7 @@ option(heap_install "Install heap lib and tests (if heap_build_tests is ON)." ON
 cmake_minimum_required(VERSION 3.13)
 project(heap VERSION 1.0 LANGUAGES CXX)
 
-# Fetching google test lib for testing
-if(${heap_build_tests})
-    #add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third-party/googletest)
 
-    #include(FetchContent)
-    #FetchContent_Declare(
-    #googletest
-    #URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
-    #)
-    # For Windows: Prevent overriding the parent project's compiler/linker settings
-    #set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-    #FetchContent_MakeAvailable(googletest)
-endif()
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -51,7 +39,7 @@ if (${heap_install})
     set(CPACK_PROJECT_NAME ${PROJECT_NAME})
     set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 
-    set(CMAKE_INSTALL_PREFIX "${heap_SOURCE_DIR}/install")
+    
 
     #option(INSTALL_GTEST "Enable installation of googletest. (Projects embedding googletest may want to turn this OFF.)" OFF)
 
