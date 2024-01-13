@@ -300,3 +300,8 @@ TEST(PriorityQueueRandomInsertPop, MaxHeap)
         }
     }
 }
+
+TEST(Fail, TestFail)
+{
+    FAIL();
+}
