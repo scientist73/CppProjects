@@ -1,0 +1,26 @@
+name: test_heap
+
+on: workflow_dispatch
+
+jobs:
+  ubuntu_test:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: setup
+      run: |
+        sudo apt install git
+        git submodule update --init --recursive
+        sudo apt install clang
+        sudo apt install cmake
+    - name: build
+      run: |
+        cd Heap
+        cmake -S . -B build
+        cd build
+        cmake --build .
+    - name: testing
+      run: |
+        ctest
+
