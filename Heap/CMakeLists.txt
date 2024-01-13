@@ -14,7 +14,9 @@ option(heap_install "Install heap lib and tests (if heap_build_tests is ON)." ON
 cmake_minimum_required(VERSION 3.13)
 project(heap VERSION 1.0 LANGUAGES CXX)
 
-
+if(${heap_build_tests})
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third-party/googletest)
+endif()
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
