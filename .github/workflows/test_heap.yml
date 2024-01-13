@@ -22,6 +22,6 @@ jobs:
         cmake --build .
     - name: testing
       run: |
-        pwd
+        cd Heap/build
         ctest
 
