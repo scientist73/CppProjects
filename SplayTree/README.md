@@ -6,20 +6,20 @@ A user-provided Compare can be supplied to change the ordering, e.g. using std::
 Functional similar to std::map (with the note that std::map implemented as red-black tree).
 
 ### Template parameters:
-- **Key**           unique key type
-- **T**             data type
-- **Compare**       key compare func type
+- **Key** - unique key type
+- **T** - data type
+- **Compare** - key compare func type
 
 ### Member types:
-- **value_type**    std::pair<const Key, T>
+- **value_type** - std::pair<const Key, T>
 
 ### Member classes:
-- **iterator**      iterator for splay_tree
+- **iterator** - iterator for splay_tree
 
 ### Member functions:
-- **insert**        inserts element
-- **erase**         erases element
-- **extract**       extracts node from the container
-- **find**          finds element with specific key
-- **empty**         checks whether the container is empty
-- **end**           returns an iterator to the end
+- **insert** - inserts element
+- **erase** - erases element
+- **extract** - extracts node from the container
+- **find** - finds element with specific key
+- **empty** - checks whether the container is empty
+- **end** - returns an iterator to the end

@@ -20,7 +20,7 @@ void get_heap(std::vector<T>& heap_vector, const heap<T, Compare>& h)
 }
 
 
-TEST(HeapInsertPop, MinHeap) 
+TEST(HeapPushPop, MinHeap) 
 {
     heap<int32_t, std::greater<int32_t>>  min_heap(std::greater<int32_t>{});
     std::vector<int32_t> heap_vector;
@@ -62,7 +62,7 @@ TEST(HeapInsertPop, MinHeap)
 
     EXPECT_THROW(min_heap.pop(), std::underflow_error);
 }
-TEST(HeapInsertPop, MaxHeap) 
+TEST(HeapPushPop, MaxHeap) 
 {
     heap<int32_t, std::less<int32_t>>  max_heap(std::less<int32_t>{});
     std::vector<int32_t> heap_vector;
@@ -106,7 +106,7 @@ TEST(HeapInsertPop, MaxHeap)
 }
 
 
-TEST(HeapRandomInsertPop, MinHeap)
+TEST(HeapRandomPushPop, MinHeap)
 {
     heap<int32_t, std::greater<int32_t>> min_heap(std::greater<int32_t>{});
     std::vector<int32_t> heap_vector;
@@ -149,7 +149,7 @@ TEST(HeapRandomInsertPop, MinHeap)
         }
     }
 }
-TEST(HeapRandomInsertPop, MaxHeap)
+TEST(HeapRandomPushPop, MaxHeap)
 {
     heap<int32_t, std::less<int32_t>> max_heap(std::less<int32_t>{});
     std::vector<int32_t> heap_vector;
@@ -194,7 +194,7 @@ TEST(HeapRandomInsertPop, MaxHeap)
 }
 
 
-TEST(PriorityQueueRandomInsertPop, MinHeap)
+TEST(PriorityQueueRandomPushPop, MinHeap)
 {
     heap<int32_t, std::greater<int32_t>> min_heap(std::greater<int32_t>{});
     std::priority_queue<int32_t, std::vector<int32_t>, std::greater<int32_t>> pr_queue;
@@ -247,7 +247,7 @@ TEST(PriorityQueueRandomInsertPop, MinHeap)
         }
     }
 }
-TEST(PriorityQueueRandomInsertPop, MaxHeap)
+TEST(PriorityQueueRandomPushPop, MaxHeap)
 {
     heap<int32_t, std::less<int32_t>> max_heap(std::less<int32_t>{});
     std::priority_queue<int32_t, std::vector<int32_t>, std::less<int32_t>> pr_queue;
